@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #1a3650; /* Fallback color */
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url("image/Lorry-Wallpaper.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keep background fixed while content scrolls */
+    padding-top: 128px; /* Space for fixed header */
+    /* Removed position: relative as it's not needed */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 5%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    border: 4px solid black;
+}
+
+.brand-name {
+    font-size: 1.8em;
+    color: black;
+    margin-right: 700px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 25px;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px; 
+    width: 100%;
+    height: 3px;
+    background: black;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Center the form */
+form.pendek {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    width: 380px;
+    max-width: 90%;
+    border: none;
+}
+
+/* Style for the heading */
+h3.pendek {
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+	z-index: 100;
+}
+
+/* Container for side-by-side buttons */
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+/* Button container styling */
+.form-buttons .login,
+.form-buttons .signup {
+    flex: 1;
+    margin: 0;
+    padding: 12px 0;
+}
+
+/* Table and input styling */
+table {
+    width: 100%;
+    margin-bottom: 25px;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+table tr td:first-child {
+    width: 40px;
+    text-align: center;
+    padding-right: 15px;
+    vertical-align: middle;
+}
+
+table img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    filter: brightness(0.8);
+}
+
+input[type="text"], 
+input[type="password"],
+input[type="email"]{
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #2c5282;
+    border-radius: 8px;
+    font-size: 1em;
+    background: white;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, 
+input[type="password"]:focus,
+input[type="email"]:focus{
+    outline: none;
+    border-color: #1a3650;
+    box-shadow: 0 0 5px rgba(26, 54, 80, 0.3);
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder,
+input[type="email"]::placeholder{
+    color: #666;
+    font-size: 0.95em;
+}

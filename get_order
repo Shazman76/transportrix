@@ -1,0 +1,20 @@
+<?php
+include('connect.php');
+
+if (isset($_GET['email'])) {
+    $email = mysqli_real_escape_string($connect, $_GET['email']);
+    
+    // Fetch only orders that are 'Processing' (not yet fully invoiced/completed)
+    $query = "SELECT Order_name, Destination, Order_address FROM cust_order WHERE Cust_Email = '$email' AND Order_Status = 'Processing'";
+    $result = mysqli_query($connect, $query);
+    
+    $orders = [];
+    while ($row = mysqli_fetch_assoc($result)) {
+        $orders[] = $row;
+    }
+    
+    header('Content-Type: application/json');
+    echo json_encode($orders);
+}
+exit();
+?>

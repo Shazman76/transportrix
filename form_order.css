@@ -1,0 +1,108 @@
+/* form_order.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.table {
+  width: 95%;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.table_header {
+  padding: 20px;
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.table_body {
+  padding: 20px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: maroon;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+  display: inline-block;
+  min-width: 100px;
+}
+
+.status.Processing,
+.status.Pending {
+  background-color: #f7c948;
+  color: #856404;
+}
+
+.status.Shipped,
+.status.InTransit {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.status.Completed {
+  background-color: #28a745;
+  color: white;
+}
+
+.edit {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.edit .btn {
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+  background-color: #007bff;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+}
+
+.edit .btn:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}

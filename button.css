@@ -1,0 +1,18 @@
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  caret-color: aliceblue;
+  border: 2px solid #000;
+  border-radius: 10px;
+  background-color: #1a1a2e;
+  cursor: pointer;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  color: antiquewhite
+}
+
+div button:hover {
+  background-color: #4F40D2;
+}
+
